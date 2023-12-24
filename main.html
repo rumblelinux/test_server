@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>CTF Server</title>
+</head>
+<body>
+  <h1>Welcome to the CTF Server!</h1>
+    <p>This server contains two challenges: a reflected XSS challenge and a stored XSS challenge.</p>
+    <br>
+    <h2>Reflected XSS Challenge</h2>
+    <form action="xss.php" method="GET">
+      <label for="name">Enter your name:</label>
+      <input type="text" name="name" id="name">
+      <input type="submit" value="Submit">
+    </form>
+    <br>
+    <h2>Stored XSS Challenge</h2>
+    <form action="comment.php" method="POST">
+      <label for="comment">Leave a comment:</label>
+      <textarea name="comment" id="comment"></textarea>
+      <input type="submit" value="Submit">
+    </form>
+  <h1>Main Page</h1>
+  <a href="logout.php">Logout</a>
+
+</body>
+
+</html>
